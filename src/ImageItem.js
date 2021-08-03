@@ -5,9 +5,9 @@ class ImageItem extends Component {
     render() {
         return (
             <p>
-                {this.props.image.name}
+                {this.props.image.keyword}
                 <img
-                    alt={this.props.image.name}
+                    alt={this.props.image.keyword}
                     width="200"
                     src={this.props.image.url}
                 />

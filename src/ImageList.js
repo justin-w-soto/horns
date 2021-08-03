@@ -5,8 +5,8 @@ class ImageList extends Component {
     render() {
         return (
             <>
-                {this.props.hornbooger.map((item) => {
-                    return <ImageItem key={item.name} image={item} />;
+                {this.props.hornbooger.map((item, index) => {
+                    return <ImageItem key={index} image={item} />;
                 })}
             </>
         );
