@@ -6,8 +6,8 @@ class ImageItem extends Component {
         const { keyword, url } = this.props;
         return (
             <p>
-                Creature: {keyword}
-                <img alt={keyword} width="300" src={url} />
+                 {keyword}
+                <img alt={keyword} width="200" src={url} />
             </p>
         );
     }
