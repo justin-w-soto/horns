@@ -3,13 +3,12 @@ import './App.css';
 
 class Dropdown extends Component {
     render() {
-        const { changeEvent, options, label } = this.props;
+        const { changeEvent, options } = this.props;
         return (
-            <div className="dropdown-container">
-                <label>{label}</label>
+            <div className="container">
                 <select className="dropdown" onChange={changeEvent}>
-                    {options.map((option) => (
-                        <option value={option}>{option}</option>
+                    {options.map((option, index) => (
+                        <option  key={index} value={option}>{option}</option>
                     ))}
                 </select>
             </div>

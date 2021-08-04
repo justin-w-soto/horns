@@ -8,7 +8,7 @@ class ImageList extends Component {
             <>
                 {horns.map((item) => {
                     const {name, url} = item;
-                    return <ImageItem key={name} name={name} url={url}/>;
+                    return <ImageItem key={item.id} name={name} url={url}/>;
                 })}
             </>
         );

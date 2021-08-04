@@ -9,7 +9,7 @@ class App extends Component {
     keyword: 'All',
     horns: 'All',
 };
-options = ['All', 'Narwhal', 'Rhino', 'Unicorn', 'Unilego', 'Triceratops', 'Markhor', 'Mouflon', 'Addax', 'Chameleon', 'Lizard', 'Dragon' ];
+options = ['All', 'narwhal', 'rhino', 'unicorn', 'unilego', 'triceratops', 'markhor', 'mouflon', 'addax', 'chameleon', 'lizard', 'dragon' ];
 hornsOptions = ['All', '1', '2', '3', '100'];
 
 handleChange = (event) => {
@@ -17,7 +17,7 @@ handleChange = (event) => {
 };
 
 handleHornsChange = (event) => {
-    const numberOfHorns = Number(event.target.value);
+    const numberOfHorns = event.target.value;
     this.setState({ horns: numberOfHorns });
 }
 
@@ -25,9 +25,10 @@ render() {
     const filteredImg = images.filter(
         (horn) => this.state.keyword === 'All' || horn.keyword === this.state.keyword
     );
-
+    console.log(this.state)
+    console.log(filteredImg)
     const filteredHorns = filteredImg.filter(
-        (horn) => this.state.horns === 'All' || horn.horns === this.state.horns
+        (horn) => this.state.horns === 'All' || horn.horns === Number(this.state.horns)
     );
 
     return (
