@@ -3,10 +3,12 @@ import ImageItem from './ImageItem.js';
 
 class ImageList extends Component {
     render() {
+        const { horns } = this.props;
         return (
             <>
-                {this.props.hornbooger.map((item, index) => {
-                    return <ImageItem key={index} image={item} />;
+                {horns.map((item) => {
+                    const {name, url} = item;
+                    return <ImageItem key={item.id} name={name} url={url}/>;
                 })}
             </>
         );
