@@ -9,7 +9,7 @@ class App extends Component {
 };
 handleChange = (event) => {
     this.setState({ keyword: event.target.value });
-    // console.log(event.target.value);
+    console.log(event.target.value)
 };
 render() {
     const filteredImg = images.filter(
@@ -20,7 +20,7 @@ render() {
         <div className="App">
             <h1>Horned Beasts</h1>
             <select onChange={this.handleChange}>
-            <option value="all">ALL</option>
+            <option value="All">ALL</option>
             <option value= "narwhal">Narwhal</option>
             <option value='rhino'>Rhino</option>
             <option value='unicorn'>Unicorn</option>

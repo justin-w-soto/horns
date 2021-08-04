@@ -4,13 +4,17 @@ class ImageItem extends Component {
     state = {};
     render() {
         return (
-            <p>
+            <p className="Stuff">
                 {this.props.image.keyword}
                 <img
                     alt={this.props.image.keyword}
-                    width="200"
+                    width="300"
                     src={this.props.image.url}
                 />
+                <>
+
+                {this.props.image.description}
+                </>
             </p>
         );
     }
